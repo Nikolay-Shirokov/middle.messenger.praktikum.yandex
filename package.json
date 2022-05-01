@@ -2,12 +2,12 @@
   "name": "middle.messenger.praktikum.yandex",
   "version": "1.0.0",
   "description": "---",
-  "main": "index.js",
   "devDependencies": {
     "parcel": "^2.5.0"
   },
   "scripts": {
-    "dev": "parcel static/index.html"
+    "dev": "parcel static/index.html",
+    "build": "parcel build static/index.html"
   },
   "repository": {
     "type": "git",
