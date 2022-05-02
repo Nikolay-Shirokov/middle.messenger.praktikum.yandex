@@ -21,7 +21,6 @@
 .sidebar__link {
   display: block;
   width: 100%;
-  font-weight: 500;
   font-size: 12px;
   line-height: 12px;
   text-decoration: none;
@@ -111,7 +110,6 @@
   grid-column: 2/3;
   grid-row: 2;
   margin: 0;
-  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   color: var(--basic-gray);
@@ -129,7 +127,6 @@
   grid-row: 1;
   margin: 0;
   text-align: right;
-  font-weight: 500;
   font-size: 9px;
   line-height: 13px;
 }
@@ -138,7 +135,6 @@
   grid-column: 4;
   grid-row: 2;
   margin: 0;
-  font-weight: 500;
   font-size: 11px;
   line-height: 12px;
   background-color: var(--basic-accent);
@@ -171,7 +167,6 @@
 }
 
 .chat__empty-text {
-  font-weight: 500;
   font-size: 12px;
   line-height: 12px;
   color: var(--basic-gray);
@@ -234,7 +229,6 @@
 }
 
 .chat__message {
-  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   display: grid;
@@ -292,7 +286,6 @@
 .chat__message-date {
   grid-column: 3;
   grid-row: 2;
-  font-weight: 500;
   font-size: 9px;
   line-height: 9px;
   margin: 0;
