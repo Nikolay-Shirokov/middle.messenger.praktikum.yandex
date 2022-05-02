@@ -16,6 +16,15 @@
   text-align: center;
 }
 
+.form-auth__fieadset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .form-auth__field {
   position: relative;
 }
@@ -30,9 +39,10 @@
 }
 
 .form-auth__input-placeholder {
+  display: block;
   position: absolute;
   left: 0;
-  top: 6px;
+  top: 20px;
   bottom: 50%;
   transform: translateY(-50%);
   font-weight: 500;
@@ -41,6 +51,7 @@
   color: #999;
   margin: 0;
   width: calc(100% - 24px);
+  height: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -51,7 +62,7 @@
 
 .form-auth__input:focus+.form-auth__input-placeholder,
 .form-auth__input:not(:placeholder-shown)+.form-auth__input-placeholder {
-  top: -3px;
+  top: 0;
   font-size: 9px;
   line-height: 9px;
 }
@@ -61,6 +72,9 @@
   font-size: 8px;
   line-height: 8px;
   color: #FF2F2F;
+  margin-top: 7px;
+  min-height: 8px;
+  display: block;
 }
 
 .form-auth__space {

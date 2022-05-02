@@ -3,6 +3,11 @@
 
 @import url(./variables/variables.css);
 
+.page {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
 .container {
   display: flex;
   flex-direction: column;
