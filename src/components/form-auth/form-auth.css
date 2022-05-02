@@ -32,7 +32,7 @@
 .form-auth__input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #3369F3;
+  border-bottom: 1px solid var(--basic-accent);
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
@@ -48,7 +48,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
-  color: #999;
+  color: var(--basic-gray);
   margin: 0;
   width: calc(100% - 24px);
   height: 100%;
@@ -71,7 +71,7 @@
   font-weight: 400;
   font-size: 8px;
   line-height: 8px;
-  color: #FF2F2F;
+  color: var(--basic-error);
   margin-top: 7px;
   min-height: 8px;
   display: block;
@@ -84,10 +84,10 @@
 .form-auth__submit-button {
   min-width: 280px;
   min-height: 37px;
-  background-color: #3369F3;
+  background-color: var(--basic-accent);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: var(--basic-white);
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
@@ -98,5 +98,5 @@
   text-decoration: none;
   font-size: 11px;
   line-height: 11px;
-  color: #3369F3;
+  color: var(--basic-accent);
 }

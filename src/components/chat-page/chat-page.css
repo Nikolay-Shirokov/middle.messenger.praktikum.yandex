@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  height: 98vh;
+  height: 100vh;
 }
 
 .chat-page__separator {
   width: 1px;
   height: 100%;
-  background-color: #EAEAEA;
+  background-color: var(--basic-gray-light);
 }
 
 .sidebar {
   max-width: 310px;
   box-sizing: border-box;
-  background-color: #FBFBFB;
+  background-color: var(--basic-gray-light-2ultra);
   padding: 0 10px 0 10px;
 }
 
@@ -25,13 +25,13 @@
   font-size: 12px;
   line-height: 12px;
   text-decoration: none;
-  color: #999;
+  color: var(--basic-gray);
   text-align: right;
   margin: 21px 0 23px 0;
 }
 
 .search {
-  background-color: #EFEFEF;
+  background-color: var(--basic-gray-light-ultra);
   border-radius: 5px;
   height: 32px;
   display: flex;
@@ -76,7 +76,7 @@
 }
 
 .sidebar__chat {
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid var(--basic-gray-light);
   display: grid;
   grid-template-columns: 47px auto auto auto;
   grid-template-rows: 13px 30px;
@@ -86,7 +86,7 @@
 }
 
 .sidebar__chat_active {
-  background-color: #E4EDFD;
+  background-color: var(--basic-gray-accent);
 }
 
 .sidebar__chat-avatar {
@@ -95,7 +95,7 @@
   border-radius: 50%;
   width: 47px;
   height: 47px;
-  background-color: #EFEFEF;
+  background-color: var(--basic-gray-light-ultra);
 }
 
 .sidebar__chat-title {
@@ -114,14 +114,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #999999;
+  color: var(--basic-gray);
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
 }
 
 .sidebar__chat-message-author {
-  color: #000;
+  color: var(--basic-dark);
 }
 
 .sidebar__message-date {
@@ -141,13 +141,13 @@
   font-weight: 500;
   font-size: 11px;
   line-height: 12px;
-  background-color: #3369F3;
+  background-color: var(--basic-accent);
   min-width: 20px;
   width: fit-content;
   height: 20px;
   box-sizing: border-box;
   border-radius: 50%;
-  color: #FFF;
+  color: var(--basic-white);
   text-align: center;
   padding: 4px;
   align-self: end;
@@ -174,7 +174,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
-  color: #999999;
+  color: var(--basic-gray);
 }
 
 .chat__header {
@@ -184,13 +184,13 @@
   gap: 10px;
   min-height: 54px;
   box-sizing: border-box;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid var(--basic-gray-light);
 }
 
 .chat__logo {
   width: 34px;
   height: 34px;
-  background-color: #EFEFEF;
+  background-color: var(--basic-gray-light-ultra);
   border-radius: 50%;
 }
 
@@ -217,7 +217,7 @@
 
 .chat__menu-button_active,
 .chat__menu-button:hover {
-  background-color: #F8F8F8;
+  background-color: var(--basic-gray-light-2ultra);
 }
 
 .chat__menu-button_active {
@@ -245,19 +245,19 @@
 
 .chat__message_type_date {
   text-align: center;
-  color: #999;
+  color: var(--basic-gray);
 }
 
 .chat__message_author_other {
   border-radius: 0 8px 8px 8px;
-  background-color: #F8F8F8;
+  background-color: var(--basic-gray-light-2ultra);
   max-width: 402px;
   padding: 11px;
 }
 
 .chat__message_author_me {
   border-radius: 8px 8px 0 8px;
-  background-color: #E4EDFD;
+  background-color: var(--basic-gray-accent);
   padding: 11px;
   max-width: 402px;
   align-self: end;
@@ -274,7 +274,7 @@
   width: 100%;
   object-fit: contain;
   border-radius: 12px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--basic-gray-light);
   box-sizing: border-box;
 }
 
@@ -296,15 +296,15 @@
   font-size: 9px;
   line-height: 9px;
   margin: 0;
-  color: #999999;
+  color: var(--basic-gray);
 }
 
 .chat__message_author_me .chat__message-date {
-  color: #3369F3;
+  color: var(--basic-accent);
 }
 
 .chat__footer {
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid var(--basic-gray-light);
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -329,7 +329,7 @@
   border: none;
   border-radius: 30px;
   flex: 10;
-  background-color: #EFEFEF;
+  background-color: var(--basic-gray-light-ultra);
   min-height: 32px;
   box-sizing: border-box;
   padding: 0 20px 0 20px;
@@ -340,7 +340,7 @@
   height: 28px;
   border: none;
   border-radius: 50%;
-  background-color: #3369F3;
+  background-color: var(--basic-accent);
   background-image: url(../../images/send-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
