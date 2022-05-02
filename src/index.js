@@ -3,6 +3,7 @@ import renderSignUp from "./pages/signup";
 import renderSignIn from "./pages/signin";
 import renderProfilePage from "./pages/profile";
 import renderProfileEditPage from "./pages/profileEdit";
+import renderPasswordEditPage from "./pages/passwordEdit";
 import renderErrorPageNotFound from "./pages/errorPageNotFound";
 import renderErrorPageDefault from "./pages/errorPageDefault";
 
@@ -17,6 +18,7 @@ function renderPage() {
     '/signin': renderSignIn,
     '/profile': renderProfilePage,
     '/profile-edit': renderProfileEditPage,
+    '/password-edit': renderPasswordEditPage,
     '/error': renderErrorPageDefault,
   }
 
