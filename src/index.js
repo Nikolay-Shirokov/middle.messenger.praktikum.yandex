@@ -12,7 +12,11 @@ const root = document.querySelector('#root');
 
 function renderPage() {
 
-  const pathname = window.location.pathname;
+  let pathname = window.location.pathname;
+
+  if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
+    pathname = pathname.slice(0, pathname.length - 1);
+  }
 
   const routes = {
     '/signup': renderSignUp,
