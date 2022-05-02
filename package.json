@@ -22,5 +22,6 @@
   "homepage": "https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex#readme",
   "dependencies": {
     "handlebars": "^4.7.7"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
