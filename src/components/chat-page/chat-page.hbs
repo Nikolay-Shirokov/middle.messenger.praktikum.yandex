@@ -1,0 +1,81 @@
+<main class="chat-page">
+  <section class="sidebar">
+    <a href="/profile-edit" class="sidebar__link active-element">Профиль ></a>
+    <form class="search">
+      <input class="search__input" type="text" placeholder="Поиск" />
+      <div class="search__icon"></div>
+    </form>
+    <ul class="sidebar__chat-list">
+      <li class="sidebar__chat active-element">
+        <div class="sidebar__chat-avatar"></div>
+        <h6 class="sidebar__chat-title">Андрей</h6>
+        <p class="sidebar__chat-message">Друзья, у меня для вас особенный выпуск новостей! и какой то еще очень очень
+          очень длинный текст</p>
+        <p class="sidebar__message-date">15:12</p>
+        <p class="sidebar__messages-qty">4</p>
+      </li>
+      <li class="sidebar__chat sidebar__chat_active active-element">
+        <div class="sidebar__chat-avatar"></div>
+        <h6 class="sidebar__chat-title">Вадим</h6>
+        <p class="sidebar__chat-message"><span class="sidebar__chat-message-author">Вы: </span>Круто!</p>
+        <p class="sidebar__message-date">15:12</p>
+        <p class="sidebar__messages-qty">4</p>
+      </li>
+      <li class="sidebar__chat active-element">
+        <div class="sidebar__chat-avatar"></div>
+        <h6 class="sidebar__chat-title">Андрей</h6>
+        <p class="sidebar__chat-message">Друзья, у меня для вас особенный выпуск новостей! и какой то еще очень очень
+          очень длинный текст</p>
+        <p class="sidebar__message-date">15:12</p>
+        <p class="sidebar__messages-qty">4</p>
+      </li>
+      <li class="sidebar__chat active-element">
+        <div class="sidebar__chat-avatar"></div>
+        <h6 class="sidebar__chat-title">Андрей</h6>
+        <p class="sidebar__chat-message">Друзья, у меня для вас особенный выпуск новостей! и какой то еще очень очень
+          очень длинный текст</p>
+        <p class="sidebar__message-date">15:12</p>
+        <p class="sidebar__messages-qty">4</p>
+      </li>
+    </ul>
+  </section>
+  <div class="chat-page__separator"></div>
+  <section class="chat">
+    <div class="chat__empty">
+      <p class="chat__empty-text">Выберите чат чтобы отправить сообщение</p>
+    </div>
+    <div class="chat__header">
+      <div class="chat__logo"></div>
+      <h3 class="chat__title">Вадим</h3>
+      <p class="chat__space"></p>
+      <button class="chat__menu-button active-element"></button>
+    </div>
+    <ul class="chat__message-list">
+      <li class="chat__message chat__message_type_date">19 июня</li>
+      <li class="chat__message chat__message_author_other">
+        <p class="chat__message-text">Привет! Смотри, тут всплыл интересный кусок лунной
+          космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на
+          Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все
+          еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.</p>
+        <span class="chat__message-status"></span>
+        <span class="chat__message-date">11:56</span>
+      </li>
+      <li class="chat__message chat__message_author_other">
+        <img class="chat__message-media" src={{templateImage}} alt="">
+        <span class="chat__message-status"></span>
+        <span class="chat__message-date">11:56</span>
+      </li>
+      <li class="chat__message chat__message_author_me">
+        <p class="chat__message-text">Круто!</p>
+        <span class="chat__message-status chat__message-status_value_read"></span>
+        <span class="chat__message-date">12:00</span>
+      </li>
+    </ul>
+    <form class="chat__footer">
+      <button class="chat__attachment-menu-button active-element"></button>
+      <input class="chat__message-input" name="message" type="text" placeholder="Сообщение">
+      <button class="chat__message-send-button active-element" type="submit"></button>
+    </form>
+  </section>
+
+</main>

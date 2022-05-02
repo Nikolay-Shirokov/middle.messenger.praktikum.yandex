@@ -1,6 +1,7 @@
 import './index.css';
 import renderSignUp from "./pages/signup";
 import renderSignIn from "./pages/signin";
+import renderChatPage from "./pages/chat";
 import renderProfilePage from "./pages/profile";
 import renderProfileEditPage from "./pages/profileEdit";
 import renderPasswordEditPage from "./pages/passwordEdit";
@@ -20,6 +21,7 @@ function renderPage() {
     '/profile-edit': renderProfileEditPage,
     '/password-edit': renderPasswordEditPage,
     '/error': renderErrorPageDefault,
+    '/': renderChatPage,
   }
 
   const currentRoute = routes[pathname];
