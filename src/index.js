@@ -1,6 +1,7 @@
 import './index.css';
 import renderSignUp from "./pages/signup";
 import renderSignIn from "./pages/signin";
+import renderErrorPageNotFound from "./pages/errorPageNotFound";
 
 const root = document.querySelector('#root');
 
@@ -14,9 +15,9 @@ function renderPage() {
   }
 
   const currentRoute = routes[pathname];
-/*   if (!currentRoute) {
+  if (!currentRoute) {
     return renderErrorPageNotFound();
-  } */
+  }
 
   return currentRoute();
 
