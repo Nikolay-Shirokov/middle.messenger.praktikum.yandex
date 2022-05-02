@@ -24,9 +24,14 @@ export default () => renderFormAuth({
       label: 'Фамилия'
     },
     {
-      name: 'second_name',
+      name: 'display_name',
       type: 'text',
-      label: 'Фамилия'
+      label: 'Имя в чате'
+    },
+    {
+      name: 'phone',
+      type: 'tel',
+      label: 'Телефон'
     },
     {
       name: 'password',
