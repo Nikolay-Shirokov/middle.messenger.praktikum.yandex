@@ -1,0 +1,88 @@
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  padding: 30px;
+  min-height: 60%;
+  margin: 0;
+  gap: 14px;
+}
+
+.form-auth__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.form-auth__field {
+  position: relative;
+}
+
+.form-auth__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #3369F3;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.form-auth__input-placeholder {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  color: #999;
+  margin: 0;
+  width: calc(100% - 24px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition:
+    top 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.form-auth__input:focus+.form-auth__input-placeholder,
+.form-auth__input:not(:placeholder-shown)+.form-auth__input-placeholder {
+  top: -3px;
+  font-size: 9px;
+  line-height: 9px;
+}
+
+.form-auth__input-error {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 8px;
+  color: #FF2F2F;
+}
+
+.form-auth__space {
+  flex: 10;
+}
+
+.form-auth__submit-button {
+  min-width: 280px;
+  min-height: 37px;
+  background-color: #3369F3;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.form-auth__link {
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 11px;
+  color: #3369F3;
+}

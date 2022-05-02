@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "---",
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
     "parcel": "^2.5.0"
   },
   "scripts": {

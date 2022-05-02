@@ -2,3 +2,23 @@
 @import url(./vendor/fonts/fonts.css);
 
 @import url(./variables/variables.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.active-element {
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.active-element:hover {
+  opacity: .8;
+}
