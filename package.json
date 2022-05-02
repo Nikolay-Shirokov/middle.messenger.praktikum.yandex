@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "parcel static/index.html",
-    "build": "parcel build static/index.html",
+    "build": "parcel build static/index.html && echo /* /index.html 200 > ./dist/_redirects",
     "start": "parcel build static/index.html && node app"
   },
   "repository": {
