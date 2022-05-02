@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "---",
   "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
     "parcel": "^2.5.0"
   },
   "scripts": {
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex/issues"
   },
-  "homepage": "https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex#readme"
+  "homepage": "https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
 }
