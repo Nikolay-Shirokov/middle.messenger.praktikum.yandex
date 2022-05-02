@@ -42,14 +42,15 @@
 
 }
 
-.profile__avatar-overlay {
+.profile__avatar-edit-button {
   position: relative;
   cursor: pointer;
   border-radius: 50%;
+  border: none;
   overflow: hidden;
 }
 
-.profile__avatar-overlay::before {
+.profile__avatar-edit-button::before {
   content: "";
   position: absolute;
   left: 0;
@@ -63,7 +64,7 @@
   transition: opacity .4s, visibility .4s linear;
 }
 
-.profile__avatar-overlay::after {
+.profile__avatar-edit-button::after {
   content: "Поменять аватар";
   position: absolute;
   left: 50%;
@@ -81,8 +82,8 @@
   transition: opacity .4s, visibility .4s linear;
 }
 
-.profile__avatar-overlay:hover::after,
-.profile__avatar-overlay:hover::before {
+.profile__avatar-edit-button:hover::after,
+.profile__avatar-edit-button:hover::before {
   visibility: visible;
   opacity: 1;
 }
