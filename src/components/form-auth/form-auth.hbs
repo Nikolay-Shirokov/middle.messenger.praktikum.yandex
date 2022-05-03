@@ -1,0 +1,19 @@
+<main class="container">
+
+  <form class="form-auth">
+    <h2 class="form-auth__title">{{ title }}</h2>
+    <fieldset class="form-auth__fieadset">
+    {{#each fields}}
+      <label class="form-auth__field">
+        <input type="{{ type }}" name="{{ name }}" class="form-auth__input" placeholder="&nbsp;" required>
+        <span class="form-auth__input-placeholder">{{ label }}</span>
+        <span class="form-auth__input-error"></span>
+      </label>
+    {{/each}}
+    </fieldset>
+    <p class="form-auth__space"></p>
+    <button type="submit" class="form-auth__submit-button">{{ submitButtonText }}</button>
+    <a class="form-auth__link" href="{{ linkToOtherPage.url }}"> {{ linkToOtherPage.text }}</a>
+  </form>
+
+</main>

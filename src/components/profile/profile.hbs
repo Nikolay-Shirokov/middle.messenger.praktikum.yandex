@@ -1,0 +1,51 @@
+<main class="container">
+  <a href="/" class="back-button active-element"></a>
+  <section class="profile">
+    <button class="profile__avatar-edit-button">
+      <img class="profile__avatar" src={{avatar}} alt="аватар">
+    </button>
+    {{#if title}}
+    <h2 class="profile__title">{{title}}</h2>
+    {{/if}}
+    {{#if forEdit}}
+    <form class="profile__form" method="post">
+      <ul class="profile__field-list">
+        {{#each fields}}
+        <li class="profile__field">
+          <p class="profile__label">{{label}}</p>
+          <input class="profile__value" type="{{type}}" name="{{name}}" value="{{value}}"
+            placeholder="Укажите значение..." required/>
+        </li>
+        {{/each}}
+      </ul>
+      <button type="submit" class="profile__submit-button active-element">Сохранить</button>
+    </form>
+    {{else}}
+    <ul class="profile__field-list">
+      {{#each fields}}
+      <li class="profile__field">
+        <p class="profile__label">{{label}}</p>
+        <p class="profile__value">{{value}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <ul class="profile__action-list">
+      {{#each actionLinks}}
+      <li class="profile__action">
+        <a class="profile__action-button active-element {{#if accent}} profile__action-button_accent {{/if}}"
+          href="{{url}}">
+          {{text}}
+        </a>
+      </li>
+      {{/each}}
+      {{#each actionButtons}}
+      <li class="profile__action">
+        <button class="profile__action-button active-element {{#if accent}} profile__action-button_accent {{/if}}">
+          {{text}}
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </section>
+</main>
