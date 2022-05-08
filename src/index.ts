@@ -8,7 +8,7 @@ import renderPasswordEditPage from "./pages/passwordEdit";
 import renderErrorPageNotFound from "./pages/errorPageNotFound";
 import renderErrorPageDefault from "./pages/errorPageDefault";
 
-const root = document.querySelector('#root');
+const root: HTMLElement | null = document.querySelector('#root');
 
 function renderPage() {
 
@@ -37,4 +37,6 @@ function renderPage() {
 
 }
 
-root.innerHTML = renderPage();
+if (root) {
+  root.innerHTML = renderPage();
+}
