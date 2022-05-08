@@ -1,6 +1,7 @@
 
 # Проектная работа первого модуля курса Яндекс.Практикум
 Макет: https://www.figma.com/file/3puQSdxTobatKrrXkhXRRu/Chat_external_link-(Copy)?node-id=1%3A2
+
 Опубликованный проект: https://admirable-biscotti-b5a516.netlify.app/
 
 ## Команды
