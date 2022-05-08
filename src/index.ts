@@ -8,17 +8,15 @@ import renderPasswordEditPage from "./pages/passwordEdit";
 import renderErrorPageNotFound from "./pages/errorPageNotFound";
 import renderErrorPageDefault from "./pages/errorPageDefault";
 
-const root: HTMLElement | null = document.querySelector('#root');
+function renderPage() : string {
 
-function renderPage() {
-
-  let pathname = window.location.pathname;
+  let pathname: string = window.location.pathname;
 
   if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
     pathname = pathname.slice(0, pathname.length - 1);
   }
 
-  const routes = {
+  const routes: object = {
     '/signup': renderSignUp,
     '/signin': renderSignIn,
     '/profile': renderProfilePage,
@@ -28,7 +26,7 @@ function renderPage() {
     '/': renderChatPage,
   }
 
-  const currentRoute = routes[pathname];
+  const currentRoute: Function = routes[pathname];
   if (!currentRoute) {
     return renderErrorPageNotFound();
   }
@@ -37,6 +35,7 @@ function renderPage() {
 
 }
 
+const root: HTMLElement | null = document.querySelector('#root');
 if (root) {
   root.innerHTML = renderPage();
 }
