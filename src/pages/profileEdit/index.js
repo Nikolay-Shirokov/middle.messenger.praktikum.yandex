@@ -1,5 +1,5 @@
-import renderProfilePage from "../../components/profile";
-import emptyPic from "../../images/empty-pic.svg";
+import renderProfilePage from '../../components/profile';
+import emptyPic from '../../images/empty-pic.svg';
 
 export default () => renderProfilePage({
   avatar: emptyPic,
@@ -42,4 +42,4 @@ export default () => renderProfilePage({
       type: 'tel',
     },
   ],
-})
+});

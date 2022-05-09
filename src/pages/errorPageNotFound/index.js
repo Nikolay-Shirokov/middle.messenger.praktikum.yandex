@@ -1,6 +1,6 @@
-import renderErrorPage from "../../components/error-page";
+import renderErrorPage from '../../components/error-page';
 
 export default () => renderErrorPage({
   code: '404',
-  text: 'Не туда попали'
-})
+  text: 'Не туда попали',
+});

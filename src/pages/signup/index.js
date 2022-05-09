@@ -1,4 +1,4 @@
-import renderFormAuth from "../../components/form-auth";
+import renderFormAuth from '../../components/form-auth';
 
 export default () => renderFormAuth({
   title: 'Регистрация',
@@ -6,47 +6,47 @@ export default () => renderFormAuth({
     {
       name: 'email',
       type: 'email',
-      label: 'Почта'
+      label: 'Почта',
     },
     {
       name: 'login',
       type: 'text',
-      label: 'Логин'
+      label: 'Логин',
     },
     {
       name: 'first_name',
       type: 'text',
-      label: 'Имя'
+      label: 'Имя',
     },
     {
       name: 'second_name',
       type: 'text',
-      label: 'Фамилия'
+      label: 'Фамилия',
     },
     {
       name: 'display_name',
       type: 'text',
-      label: 'Имя в чате'
+      label: 'Имя в чате',
     },
     {
       name: 'phone',
       type: 'tel',
-      label: 'Телефон'
+      label: 'Телефон',
     },
     {
       name: 'password',
       type: 'password',
-      label: 'Пароль'
+      label: 'Пароль',
     },
     {
       name: 'password_repeat',
       type: 'password',
-      label: 'Пароль (ещё раз)'
+      label: 'Пароль (ещё раз)',
     },
   ],
   submitButtonText: 'Зарегистрироваться',
   linkToOtherPage: {
     url: '/signin',
-    text: 'Войти'
-  }
+    text: 'Войти',
+  },
 });
