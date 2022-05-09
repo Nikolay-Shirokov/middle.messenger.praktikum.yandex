@@ -1,11 +1,11 @@
 :root {
   --basic-white: #fff;
   --basic-dark: #000;
-  --basic-error: #ff0000;
+  --basic-error: #f00;
   --basic-accent: #3369f3;
   --basic-gray-light-2ultra: #f8f8f8;
   --basic-gray-light-ultra: #efefef;
   --basic-gray-light: #eaeaea;
-  --basic-gray: #999999;
+  --basic-gray: #999;
   --basic-gray-accent: #e4edfd;
 }

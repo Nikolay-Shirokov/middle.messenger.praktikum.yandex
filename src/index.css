@@ -1,10 +1,9 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
-
 @import url(./variables/variables.css);
 
 .page {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
