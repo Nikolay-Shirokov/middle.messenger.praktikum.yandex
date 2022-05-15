@@ -16,7 +16,7 @@ function renderPage() : string {
     pathname = pathname.slice(0, pathname.length - 1);
   }
 
-  const routes: object = {
+  const routes: Record<string, () => string> = {
     '/signup': renderSignUp,
     '/signin': renderSignIn,
     '/profile': renderProfilePage,
@@ -26,7 +26,7 @@ function renderPage() : string {
     '/': renderChatPage,
   }
 
-  const currentRoute: Function = routes[pathname];
+  const currentRoute: () => string = routes[pathname];
   if (!currentRoute) {
     return renderErrorPageNotFound();
   }
