@@ -7,7 +7,7 @@
       <label class="form-auth__field">
         <input type="{{ type }}" name="{{ name }}" class="form-auth__input" placeholder="&nbsp;" required>
         <span class="form-auth__input-placeholder">{{ label }}</span>
-        <span class="form-auth__input-error"></span>
+        <span class="form-auth__input-error" data-input="{{ name }}"></span>
       </label>
     {{/each}}
     </fieldset>

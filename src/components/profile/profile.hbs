@@ -15,7 +15,7 @@
           <p class="profile__label">{{label}}</p>
           <input class="profile__value" type="{{type}}" name="{{name}}" value="{{value}}"
             placeholder="Укажите значение..." required />
-          <span class="profile__value-error"></span>
+          <span class="profile__value-error" data-input="{{name}}"></span>
         </li>
         {{/each}}
       </ul>
