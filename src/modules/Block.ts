@@ -1,5 +1,7 @@
 import EventBus from "./EventBus";
 
+type TTemplate = (context: any) => string;
+
 export default class Block {
   static EVENTS = {
     INIT: "init",
@@ -9,7 +11,7 @@ export default class Block {
   };
 
   private _element: HTMLElement | null = null;
-  private _meta: { tagName: string, props: any };
+  private _meta: { template: TTemplate, props: any };
   private eventBus: () => EventBus;
   protected props: any;
 
@@ -19,10 +21,10 @@ export default class Block {
    *
    * @returns {void}
    */
-  constructor(tagName: string = "div", props: any = {}) {
+  constructor(template: TTemplate, props: any = {}) {
     const eventBus = new EventBus();
     this._meta = {
-      tagName,
+      template,
       props
     };
 
@@ -41,14 +43,7 @@ export default class Block {
     eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
   }
 
-  private _createResources() {
-    const { tagName } = this._meta;
-    this._element = this._createDocumentElement(tagName);
-  }
-
   protected init(): void {
-    this._createResources();
-
     this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
   }
 
@@ -71,7 +66,7 @@ export default class Block {
   }
 
   protected componentDidUpdate(oldProps: any, newProps: any) {
-    return true;
+    return oldProps !== newProps;
   }
 
   protected setProps = (nextProps: any) => {
@@ -88,16 +83,22 @@ export default class Block {
 
   private _render() {
 
-    const block = this.render();
+    const fragment = this.render();
 
-    this._removeEvents();
-    this._element!.innerHTML = block;
+    const newElement = fragment.firstElementChild as HTMLElement;
+
+    if (this.element) {
+      this._removeEvents();
+      this._element!.replaceWith(newElement);
+    }
+
+    this._element = newElement;
     this._addEvents();
 
   }
 
-  protected render(): string {
-    return '';
+  protected render(): DocumentFragment {
+    return this.compile(this._meta.template, this.props);
   }
 
   protected getContent() {
@@ -128,7 +129,6 @@ export default class Block {
   }
 
   private _createDocumentElement(tagName: string) {
-    // Можно сделать метод, который через фрагменты в цикле создаёт сразу несколько блоков
     return document.createElement(tagName);
   }
 
@@ -157,6 +157,16 @@ export default class Block {
     Object.entries(events).forEach(([eventName, listener]) => {
       this.element!.removeEventListener(eventName, listener);
     })
+
+  }
+
+  protected compile(template: any, context: any): DocumentFragment {
+
+    const fragment = this._createDocumentElement('template') as HTMLTemplateElement;
+
+    fragment.innerHTML = template(context);
+
+    return fragment.content;
 
   }
 
