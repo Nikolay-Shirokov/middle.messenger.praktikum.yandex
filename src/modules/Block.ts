@@ -115,10 +115,11 @@ export default class Block {
         return typeof value === "function" ? value.bind(target) : value;
       },
       set(target, prop, value) {
+        const oldProps = {...target};
         target[prop] = value;
 
         // Запускаем обновление компоненты
-        self.eventBus().emit(Block.EVENTS.FLOW_CDU, { ...target }, target);
+        self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldProps, target);
         return true;
       },
       deleteProperty() {
