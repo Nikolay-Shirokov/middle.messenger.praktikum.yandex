@@ -107,16 +107,15 @@
 }
 
 .profile__field {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
   border-bottom: 1px solid var(--basic-gray-light);
   min-height: 33px;
-  gap: 10px;
+  column-gap: 10px;
 }
 
 .profile__field:last-of-type {
@@ -138,6 +137,16 @@
   background-color: transparent;
   text-align: end;
   min-width: 50%;
+  justify-self: end;
+}
+
+.profile__value-error {
+  color: var(--basic-error);
+  font-size: 9px;
+  line-height: 9px;
+  justify-self: end;
+  margin: 0;
+  grid-column: 1/-1;
 }
 
 .profile__action-list {
