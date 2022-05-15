@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "parcel static/index.html",
-    "build": "parcel build static/index.html && cp ./_redirects ./dist/_redirects",
+    "build": "rm -r ./dist && parcel build static/index.html && cp ./_redirects ./dist/_redirects",
     "start": "parcel build static/index.html && node app",
     "lint": "npx eslint . && npx stylelint '**/*.css'"
   },
