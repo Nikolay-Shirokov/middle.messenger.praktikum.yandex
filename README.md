@@ -19,5 +19,5 @@
 По прочим роутам должна рендериться страница ошибки 404
 
 ## Pull requests
-https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex/pull/1
+https://github.com/Nikolay-Shirokov/middle.messenger.praktikum.yandex/pull/2
 
