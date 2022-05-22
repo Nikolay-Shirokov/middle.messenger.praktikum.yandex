@@ -16,16 +16,16 @@ type TOptions = {
 type TUrl = string;
 
 export default class HTTPTransport {
-  protected get = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
+  public get = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
     return this.request(url, { ...options, method: METHODS.GET }, options.timeout);
   };
-  protected put = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
+  public put = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
     return this.request(url, { ...options, method: METHODS.PUT }, options.timeout);
   };
-  protected post = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
+  public post = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
     return this.request(url, { ...options, method: METHODS.POST }, options.timeout);
   };
-  protected delete = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
+  public delete = (url: TUrl, options: TOptions = {}): Promise<XMLHttpRequest> => {
     return this.request(url, { ...options, method: METHODS.DELETE }, options.timeout);
   };
 
