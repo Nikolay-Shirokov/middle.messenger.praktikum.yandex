@@ -1,14 +1,15 @@
 import './index.css';
-import renderSignUp from "./pages/signup";
-import renderSignIn from "./pages/signin";
-import renderChatPage from "./pages/chat";
-import renderProfilePage from "./pages/profile";
-import renderProfileEditPage from "./pages/profileEdit";
-import renderPasswordEditPage from "./pages/passwordEdit";
-import renderErrorPageNotFound from "./pages/errorPageNotFound";
-import renderErrorPageDefault from "./pages/errorPageDefault";
+import pageSignUp from "./pages/signup";
+import pageSignIn from "./pages/signin";
+import pageChat from "./pages/chat";
+import pageProfile from "./pages/profile";
+import pageProfileEdit from "./pages/profileEdit";
+import pagePasswordEdit from "./pages/passwordEdit";
+import pageErrorNotFound from "./pages/errorPageNotFound";
+import pageErrorDefault from "./pages/errorPageDefault";
+import Block from './modules/Block';
 
-function renderPage() : string {
+function getContentPage(): HTMLElement | null {
 
   let pathname: string = window.location.pathname;
 
@@ -16,26 +17,27 @@ function renderPage() : string {
     pathname = pathname.slice(0, pathname.length - 1);
   }
 
-  const routes: Record<string, () => string> = {
-    '/signup': renderSignUp,
-    '/signin': renderSignIn,
-    '/profile': renderProfilePage,
-    '/profile-edit': renderProfileEditPage,
-    '/password-edit': renderPasswordEditPage,
-    '/error': renderErrorPageDefault,
-    '/': renderChatPage,
+  const routes: Record<string, Block> = {
+    '/signup': pageSignUp,
+    '/signin': pageSignIn,
+    '/profile': pageProfile,
+    '/profile-edit': pageProfileEdit,
+    '/password-edit': pagePasswordEdit,
+    '/error': pageErrorDefault,
+    '/': pageChat,
   }
 
-  const currentRoute: () => string = routes[pathname];
+  let currentRoute: Block = routes[pathname];
   if (!currentRoute) {
-    return renderErrorPageNotFound();
+    currentRoute = pageErrorNotFound;
   }
 
-  return currentRoute();
+  return currentRoute.getContent();
 
 }
 
 const root: HTMLElement | null = document.querySelector('#root');
 if (root) {
-  root.innerHTML = renderPage();
+  root.innerHTML = '';
+  root.append(getContentPage()!);
 }

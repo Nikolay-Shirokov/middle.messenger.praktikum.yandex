@@ -1,7 +1,7 @@
-import renderProfilePage from '../../components/profile';
+import ProfilePage from '../../components/profile';
 import emptyPic from '../../images/empty-pic.svg';
 
-export default () => renderProfilePage({
+export default new ProfilePage({
   avatar: emptyPic,
   title: 'Иван',
   fields: [

@@ -101,7 +101,7 @@ export default class Block {
     return this.compile(this._meta.template, this.props);
   }
 
-  protected getContent() {
+  public getContent() {
     return this.element;
   }
 
@@ -115,7 +115,7 @@ export default class Block {
         return typeof value === "function" ? value.bind(target) : value;
       },
       set(target, prop, value) {
-        const oldProps = {...target};
+        const oldProps = { ...target };
         target[prop] = value;
 
         // Запускаем обновление компоненты
@@ -135,28 +135,58 @@ export default class Block {
 
   private _addEvents() {
 
-    const events: Record<string, () => void> = this.props.events;
+    const events: Record<string, Record<string, () => void>> = this.props.events;
 
     if (!events || !this.element) {
       return;
     }
 
-    Object.entries(events).forEach(([eventName, listener]) => {
-      this.element!.addEventListener(eventName, listener);
+    Object.keys(events).forEach(selector => {
+
+      let elements: HTMLElement[] = [];
+      if (selector === "root") {
+        elements.push(this.element!);
+      } else {
+        elements = Array.from(this.element!.querySelectorAll(selector));
+      }
+
+      if (!elements) {
+        return;
+      }
+
+      Object.entries(events[selector]).forEach(([eventName, listener]) => {
+        elements.forEach(element => element.addEventListener(eventName, listener));
+      })
+
     })
 
   }
 
   private _removeEvents() {
 
-    const events: Record<string, () => void> = this.props.events;
+    const events: Record<string, Record<string, () => void>> = this.props.events;
 
     if (!events || !this.element) {
       return;
     }
 
-    Object.entries(events).forEach(([eventName, listener]) => {
-      this.element!.removeEventListener(eventName, listener);
+    Object.keys(events).forEach(selector => {
+
+      let elements: HTMLElement[] = [];
+      if (selector === "root") {
+        elements.push(this.element!);
+      } else {
+        elements = Array.from(this.element!.querySelectorAll(selector));
+      }
+
+      if (!elements) {
+        return;
+      }
+
+      Object.entries(events[selector]).forEach(([eventName, listener]) => {
+        elements.forEach(element => element.removeEventListener(eventName, listener));
+      })
+
     })
 
   }
@@ -171,11 +201,11 @@ export default class Block {
 
   }
 
-  protected show(): void {
+  public show(): void {
     this.getContent()!.style.display = "block";
   }
 
-  protected hide(): void {
+  public hide(): void {
     this.getContent()!.style.display = "none";
   }
 }

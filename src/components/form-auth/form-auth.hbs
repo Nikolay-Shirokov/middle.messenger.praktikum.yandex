@@ -3,17 +3,28 @@
   <form class="form-auth">
     <h2 class="form-auth__title">{{ title }}</h2>
     <fieldset class="form-auth__fieadset">
-    {{#each fields}}
+      {{#each fields}}
       <label class="form-auth__field">
-        <input type="{{ type }}" name="{{ name }}" class="form-auth__input" placeholder="&nbsp;" required>
+        <input type="{{ type }}" name="{{ name }}" class="form-auth__input" placeholder="&nbsp;"
+          {{#if pattern}}
+            pattern="{{ pattern }}"
+          {{/if}}
+          {{#if minlength}}
+            minlength="{{ minlength }}"
+          {{/if}}
+          {{#if maxlength}}
+            maxlength="{{ maxlength }}"
+          {{/if}}
+          required
+        >
         <span class="form-auth__input-placeholder">{{ label }}</span>
         <span class="form-auth__input-error" data-input="{{ name }}"></span>
       </label>
-    {{/each}}
+      {{/each}}
     </fieldset>
     <p class="form-auth__space"></p>
-    <button type="submit" class="form-auth__submit-button">{{ submitButtonText }}</button>
-    <a class="form-auth__link" href="{{ linkToOtherPage.url }}"> {{ linkToOtherPage.text }}</a>
+    <button type="submit" class="form-auth__submit-button active-element">{{ submitButtonText }}</button>
+    <a class="form-auth__link active-element" href="{{ linkToOtherPage.url }}"> {{ linkToOtherPage.text }}</a>
   </form>
 
 </main>

@@ -1,6 +1,6 @@
-import renderFormAuth from '../../components/form-auth';
+import FormAuth from '../../components/form-auth';
 
-export default () => renderFormAuth({
+export default new FormAuth({
   title: 'Вход',
   fields: [
     {
