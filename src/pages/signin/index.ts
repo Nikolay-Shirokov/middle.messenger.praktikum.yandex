@@ -1,22 +1,22 @@
-import renderFormAuth from "../../components/form-auth";
+import FormAuth from '../../components/form-auth';
 
-export default () => renderFormAuth({
+export default new FormAuth({
   title: 'Вход',
   fields: [
     {
       name: 'login',
       type: 'text',
-      label: 'Логин'
+      label: 'Логин',
     },
     {
       name: 'password',
       type: 'password',
-      label: 'Пароль'
+      label: 'Пароль',
     },
   ],
   submitButtonText: 'Войти',
   linkToOtherPage: {
     url: '/signup',
-    text: 'Нет аккаунта?'
-  }
+    text: 'Нет аккаунта?',
+  },
 });

@@ -14,7 +14,18 @@
         <li class="profile__field">
           <p class="profile__label">{{label}}</p>
           <input class="profile__value" type="{{type}}" name="{{name}}" value="{{value}}"
-            placeholder="Укажите значение..." required/>
+            placeholder="Укажите значение..."
+            {{#if pattern}}
+              pattern="{{ pattern }}"
+            {{/if}}
+            {{#if minlength}}
+              minlength="{{ minlength }}"
+            {{/if}}
+            {{#if maxlength}}
+              maxlength="{{ maxlength }}"
+            {{/if}}
+            required />
+          <span class="profile__value-error" data-input="{{name}}"></span>
         </li>
         {{/each}}
       </ul>

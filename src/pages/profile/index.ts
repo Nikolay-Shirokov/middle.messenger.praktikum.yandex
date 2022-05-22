@@ -1,7 +1,7 @@
-import renderProfilePage from "../../components/profile";
-import emptyPic from "../../images/empty-pic.svg";
+import ProfilePage from '../../components/profile';
+import emptyPic from '../../images/empty-pic.svg';
 
-export default () => renderProfilePage({
+export default new ProfilePage({
   avatar: emptyPic,
   title: 'Иван',
   fields: [
@@ -43,7 +43,7 @@ export default () => renderProfilePage({
   actionButtons: [
     {
       text: 'Выйти',
-      accent: true
+      accent: true,
     },
   ],
-})
+});

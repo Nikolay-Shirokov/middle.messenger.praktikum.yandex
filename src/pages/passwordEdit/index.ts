@@ -1,7 +1,7 @@
-import renderProfilePage from "../../components/profile";
-import emptyPic from "../../images/empty-pic.svg";
+import ProfilePage from '../../components/profile';
+import emptyPic from '../../images/empty-pic.svg';
 
-export default () => renderProfilePage({
+export default new ProfilePage({
   avatar: emptyPic,
   forEdit: true,
   fields: [
@@ -16,6 +16,9 @@ export default () => renderProfilePage({
       value: '',
       name: 'newPassword',
       type: 'password',
+      minlength: 8,
+      maxlength: 40,
+      pattern: '(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,40}',
     },
     {
       label: 'Повторите новый пароль',
@@ -24,4 +27,4 @@ export default () => renderProfilePage({
       type: 'password',
     },
   ],
-})
+});
